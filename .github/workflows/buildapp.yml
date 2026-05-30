@@ -15,7 +15,7 @@ jobs:
       - name: code-checkout
         uses: actions/checkout@v4
 
-      -name: compile
+      - name: compile
         run: mkdir build
 
       - name: upload artifact
@@ -23,5 +23,5 @@ jobs:
         with:
           name: app-dis1
           path: build/
-          retention-days 3
+          retention-days: 3
     
