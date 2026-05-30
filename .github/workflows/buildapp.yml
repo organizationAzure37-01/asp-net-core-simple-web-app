@@ -1,0 +1,27 @@
+name : BuildApp
+
+on:
+  workflow_dispatch:
+
+  push:
+   branches:
+     - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: code-checkout
+        uses: actions/checkout@v4
+
+      -name: compile
+        run: mkdir build
+
+      - name: upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-dis1
+          path: build/
+          retention-days 3
+    
