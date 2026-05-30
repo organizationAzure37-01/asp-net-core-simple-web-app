@@ -57,6 +57,6 @@ jobs:
       - name: Subir Artefacto
         uses: actions/upload-artifact@v4
         with:
-          name: app-dist-${{ github.event.inputs.environment || 'dev' }}
+          name: app-${{ github.event.inputs.environment || 'dev' }}
           path: build/
           retention-days: 5
